@@ -21,7 +21,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('core.urls')),
+    path('user/',include('user.urls')),
+    path('product/',include('product.urls')),
+    path('cart/',include('cart.urls')),
+    path('shipment/',include('shipment.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
