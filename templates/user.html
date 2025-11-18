@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="inner_page_head">
+    <div class="container_fuild">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="full">
+                <h3>Login & Registration</h3>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+<section class="why_section layout_padding">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6 text-center">
+             <a href="/user/login" class="btn btn-primary">Login</a>
+          </div>
+          <div class="col-md-6 text-center">
+            <a href="/user/signup" class="btn btn-primary">Register</a>
+         </div>
+       </div>
+    </div>
+ </section>
+{% endblock content %}
