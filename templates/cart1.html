@@ -8,13 +8,14 @@
             <!-- Cart Items -->
             <div class="card mb-4">
                 <div class="card-body">
+                    {%for cart in Product%}
                     <div class="row cart-item mb-3">
                         <div class="col-md-3">
-                            <img src="https://via.placeholder.com/100" alt="Product 1" class="img-fluid rounded">
+                            <img src="{{cart.img.url}}" alt="Product 1" class="img-fluid rounded">
                         </div>
                         <div class="col-md-5">
-                            <h5 class="card-title">Product 1</h5>
-                            <p class="text-muted">Category: Electronics</p>
+                            <h5 class="card-title">{{cart.name}}</h5>
+                            <p class="text-muted"></p>
                         </div>
                         <div class="col-md-2">
                             <div class="input-group">
@@ -24,35 +25,14 @@
                             </div>
                         </div>
                         <div class="col-md-2 text-end">
-                            <p class="fw-bold">$99.99</p>
+                            <p class="fw-bold">{{cart.price}}</p>
                             <button class="btn btn-sm btn-outline-danger">
                                     <i class="bi bi-trash"></i>
                                 </button>
                         </div>
                     </div>
                     <hr>
-                    <div class="row cart-item">
-                        <div class="col-md-3">
-                            <img src="https://via.placeholder.com/100" alt="Product 2" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-5">
-                            <h5 class="card-title">Product 2</h5>
-                            <p class="text-muted">Category: Clothing</p>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="input-group">
-                                <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
-                                <input style="max-width:100px" type="text" class="form-control form-control-sm text-center quantity-input" value="2">
-                                <button class="btn btn-outline-secondary btn-sm" type="button">+</button>
-                            </div>
-                        </div>
-                        <div class="col-md-2 text-end">
-                            <p class="fw-bold">$49.99</p>
-                            <button class="btn btn-sm btn-outline-danger">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                        </div>
-                    </div>
+                    {%endfor%}
                 </div>
             </div>
             <!-- Continue Shopping Button -->
